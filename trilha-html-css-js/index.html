@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atividades</title>
+    <link rel="stylesheet" href="./style.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/locale/pt-br.js"></script>
+    <script>
+      dayjs.locale('pt-br')
+    </script>
+
+    <div id="app">
+      <form onsubmit="salvarAtividade(event)">
+        <div id="place" class="card-bg">
+          <img src="./assets/map-pin.svg" alt="Ícone" />
+          <p>Florianópolis - SC</p>
+        </div>
+
+        <div class="fields">
+          <div class="field-wrapper">
+            <img src="./assets/tag.svg" alt="Ícone de tag" />
+            <input
+              type="text"
+              placeholder="Qual a atividade?"
+              name="atividade"
+              required
+            />
+          </div>
+
+          <div class="field-wrapper">
+            <img src="./assets/calendar.svg" alt="Ícone de calendário" />
+
+            <select name="dia">
+              <option value="2024-03-01">01 de março de 2024</option>
+            </select>
+          </div>
+
+          <div class="field-wrapper">
+            <img src="./assets/clock.svg" alt="Ícone de relógio" />
+
+            <select name="hora">
+              <option value="10:30">10:30</option>
+            </select>
+          </div>
+        </div>
+
+        <button>Salvar atividade</button>
+      </form>
+
+      <main>
+        <h1>Atividades</h1>
+        <section></section>
+      </main>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
